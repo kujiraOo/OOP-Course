@@ -6,6 +6,8 @@ public class GeneralInfo extends Info {
 	protected int id;
 
 	public GeneralInfo() {
+		
+		super();
 
 		name = "unknown";
 		phoneNumber = "unknown";
@@ -13,12 +15,14 @@ public class GeneralInfo extends Info {
 
 	public GeneralInfo(String name, int id, String phoneNumber) {
 
+		super(id);
+
 		this.name = name;
-		this.id = id;
 		this.phoneNumber = phoneNumber;
 	}
-	
+
 	protected String generateInfo() {
+
 		return "Name: " + name + "\nid: " + id + "\nPhone number: "
 				+ phoneNumber;
 	}

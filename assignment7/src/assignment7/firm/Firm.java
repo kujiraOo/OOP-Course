@@ -3,6 +3,14 @@ package assignment7.firm;
 public class Firm {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Instantiatig objects with different "
+				+ "constructors is an example of compile-time polymorphysm");
+
+		System.out.println("Calling inherited methods "
+				+ "is an example of run-time polymorphysm");
+		
+		System.out.println();
 
 		System.out.println("Testing GeneralInfo");
 
