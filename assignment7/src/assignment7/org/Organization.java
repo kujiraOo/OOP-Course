@@ -3,6 +3,7 @@ package assignment7.org;
 import java.util.Calendar;
 
 import assignment7.emps.Employee;
+import assignment7.workers.Worker;
 
 public class Organization {
 
@@ -62,7 +63,24 @@ public class Organization {
 				+ mark.getTotalTax());
 		System.out.println("Amount of tax Mark is paying in 10 months: "
 				+ mark.getTotalTax(6));
-
+		
+		
+		
+		//*****************************
+		System.out.print("\n\n\n");
+		
+		Employee employee = new Employee("Bob", "Janitor", 0.2, 15.0, 24, 180);
+		//Worker worker = new Worker();
+		
+		Worker person;
+		
+		//person = worker;
+		//System.out.println(person.toString());
+		System.out.println();
+		
+		person = employee;
+		
+		System.out.println(person.toString());
 	}
 
 }

@@ -16,6 +16,13 @@ public class Employee extends GeneralInfo {
 		this.job = job;
 		this.salary = salary;
 	}
+	
+	public String getInfo(int id) {
+		if (this.id == id)
+			return generateInfo();
+		
+		return "Id does not match";
+	}
 
 	protected String generateInfo() {
 		return super.generateInfo() + "\nJob: " + job + "\nSalary: " + salary;

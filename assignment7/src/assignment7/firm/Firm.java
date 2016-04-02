@@ -10,23 +10,6 @@ public class Firm {
 		System.out.println("Calling inherited methods "
 				+ "is an example of run-time polymorphysm");
 		
-		System.out.println();
-
-		System.out.println("Testing GeneralInfo");
-
-		System.out.println("\nDefault constructor:");
-		GeneralInfo dgi = new GeneralInfo();
-
-		System.out.println(dgi.getInfo(0));
-
-		System.out.println("\nConstructor with parameters:");
-		GeneralInfo pgi = new GeneralInfo("Sam", 10, "+8649545");
-
-		System.out.println("Calling getInfo with matching id:");
-		System.out.println(pgi.getInfo(10));
-
-		System.out.println("\nCalling getInfo with not matching id:");
-		System.out.println(pgi.getInfo(0));
 
 		// *******************************************************
 
@@ -38,13 +21,13 @@ public class Firm {
 		System.out.println(demp.getInfo(0));
 
 		System.out.println("\nConstructor with parameters:");
-		Employee pemp = new Employee("Tad", 20, "+3333333", "programmer", 3000);
+		Employee employee = new Employee("Tad", 30, "+3333333", "programmer", 3000);
 
 		System.out.println("Calling getInfo with matching id:");
-		System.out.println(pemp.getInfo(20));
+		System.out.println(employee.getInfo(20));
 
 		System.out.println("\nCalling getInfo with not matching id:");
-		System.out.println(pemp.getInfo(0));
+		System.out.println(employee.getInfo(0));
 
 		// *******************************************************
 
@@ -56,13 +39,30 @@ public class Firm {
 		System.out.println(dmgr.getInfo(0));
 
 		System.out.println("\nConstructor with parameters:");
-		Manager pmgr = new Manager("Bob", 30, "+777777775", "programmer", 3000, new String[] {"CS:GO", "Fatal Frame"});
+		Manager manager = new Manager("Bob", 30, "+777777775", "programmer", 3000, new String[] {"CS:GO", "Fatal Frame"});
 
 		System.out.println("Calling getInfo with matching id:");
-		System.out.println(pmgr.getInfo(30));
+		System.out.println(manager.getInfo(30));
 
 		System.out.println("\nCalling getInfo with not matching id:");
-		System.out.println(pmgr.getInfo(0));
+		System.out.println(manager.getInfo(0));
+		
+		// *******************************************************
+		// Example of run time polymorphism 
+		
+		System.out.print("\n\n\n");
+		
+		GeneralInfo person;
+		
+		person = manager;
+		
+		System.out.println(person.getInfo(30));
+		
+		System.out.println();
+		
+		person = employee;
+		
+		System.out.println(person.getInfo(30));
 	}
 
 }

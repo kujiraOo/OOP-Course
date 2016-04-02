@@ -1,6 +1,6 @@
 package assignment7.firm;
 
-public class GeneralInfo extends Info {
+public abstract class GeneralInfo {
 
 	protected String name, phoneNumber;
 	protected int id;
@@ -15,8 +15,7 @@ public class GeneralInfo extends Info {
 
 	public GeneralInfo(String name, int id, String phoneNumber) {
 
-		super(id);
-
+		this.id = id;
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 	}
@@ -26,5 +25,6 @@ public class GeneralInfo extends Info {
 		return "Name: " + name + "\nid: " + id + "\nPhone number: "
 				+ phoneNumber;
 	}
-
+	
+	public abstract String getInfo(int id);
 }
