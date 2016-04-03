@@ -30,7 +30,9 @@ public class Account implements IAccount {
 
     @Override
     public String toString() {
-        return "account: " + accountNumber +
+        return "\nbank: " + name +
+                "\naddress: " + address +
+                "\naccount: " + accountNumber +
                 "\nbalance: " + balance +
                 "\ninterest rate: " + interestRate +
                 "\ntax rate: " + taxRate;

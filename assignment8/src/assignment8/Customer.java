@@ -1,24 +1,24 @@
 package assignment8;
 
-public class Customer {
+class Customer {
 
     private String name;
     private String address;
     private Account[] accounts;
 
-    public Customer() {
+    Customer() {
         name = "unknown";
         address = "unknown";
         accounts = new Account[] {};
     }
 
-    public Customer(String name, String address, Account account) {
+    Customer(String name, String address, Account account) {
         this.name = name;
         this.address = address;
         this.accounts = new Account[] {account};
     }
 
-    public Customer(String name, String address, Account[] accounts) {
+    Customer(String name, String address, Account[] accounts) {
         this.name = name;
         this.address = address;
         this.accounts = accounts;
@@ -35,9 +35,9 @@ public class Customer {
     }
 
     public double getTotalTax(int accountNumber) {
-        for (int i = 0; i < accounts.length; i++) {
-            if (accounts[i].getAccountNumber() == accountNumber)
-                return accounts[i].getTax();
+        for (Account account : accounts) {
+            if (account.getAccountNumber() == accountNumber)
+                return account.getTax();
         }
 
         return 0;
